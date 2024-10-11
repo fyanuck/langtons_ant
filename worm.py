@@ -115,7 +115,7 @@ def draw_world(world):
 
 # Draw trace
 def draw_trace(world):
-    for trace_point, point_color in zip(trace_points, trace_points_colors):
+    for trace_point, point_color in zip(trace_points[::-1], trace_points_colors[::-1]):
         x, y = trace_point
         pygame.draw.rect(screen, point_color, (x * cell_size, y * cell_size, cell_size, cell_size))
 
